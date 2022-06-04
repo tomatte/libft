@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 19:38:07 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/01 19:46:07 by dbrandao         ###   ########.fr       */
+/*   Created: 2022/06/03 22:43:54 by dbrandao          #+#    #+#             */
+/*   Updated: 2022/06/03 22:47:27 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_toupper(int c)
 {
-	size_t		i;
-	int			*d;
-	const int	*s;
-
-	d = dest;
-	s = src;
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (dest);
+	if (c > 96 && c < 123)
+		c -= 32;
+	return (c);
 }

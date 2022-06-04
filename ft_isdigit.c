@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 19:38:07 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/01 19:46:07 by dbrandao         ###   ########.fr       */
+/*   Created: 2022/06/03 21:46:19 by dbrandao          #+#    #+#             */
+/*   Updated: 2022/06/03 21:49:57 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_isdigit(int c)
 {
-	size_t		i;
-	int			*d;
-	const int	*s;
-
-	d = dest;
-	s = src;
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (dest);
+	if (c > 47 && c < 58)
+		return (1);
+	return (0);
 }

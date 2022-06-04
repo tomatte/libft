@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 01:28:11 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/05/31 21:22:08 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/01 19:45:46 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	int	i;
 
-	i = 0;	
+	i = 0;
 	while (i < (int) n)
 	{
 		((char *) s)[i] = '\0';

@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 19:38:07 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/01 19:46:07 by dbrandao         ###   ########.fr       */
+/*   Created: 2022/06/04 03:59:22 by dbrandao          #+#    #+#             */
+/*   Updated: 2022/06/04 05:02:26 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	size_t		i;
-	int			*d;
-	const int	*s;
+	size_t	i;
 
-	d = dest;
-	s = src;
 	i = 0;
-	while (i < n)
+	while (s[i++])
+		;
+	return (i - 1);
+}
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	int		i;
+	int		full_len;
+	char	*s;
+
+	s = (char *) src;
+	i = 0;
+	while (dst[i])
+		i++;
+	full_len = i + ft_strlen(src);
+	while (i < (int) size - 1 && src[i])
 	{
-		d[i] = s[i];
+		dst[i] = *s;
+		s++;
 		i++;
 	}
-	return (dest);
+	dst[i] = '\0';
+	return ((size_t) full_len);
 }

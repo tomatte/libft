@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 19:38:07 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/01 19:46:07 by dbrandao         ###   ########.fr       */
+/*   Created: 2022/06/04 01:09:09 by dbrandao          #+#    #+#             */
+/*   Updated: 2022/06/04 01:13:37 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t		i;
-	int			*d;
-	const int	*s;
+	char	*last;
 
-	d = dest;
-	s = src;
-	i = 0;
-	while (i < n)
+	while (*s)
 	{
-		d[i] = s[i];
-		i++;
+		if ((int)(*s) == c)
+			last = (char *) s;
+		s++;
 	}
-	return (dest);
+	if (*last)
+		return (last);
+	return (NULL);
 }

@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 19:38:07 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/01 19:46:07 by dbrandao         ###   ########.fr       */
+/*   Created: 2022/06/03 21:51:02 by dbrandao          #+#    #+#             */
+/*   Updated: 2022/06/03 22:37:22 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_isalnum(int c)
 {
-	size_t		i;
-	int			*d;
-	const int	*s;
-
-	d = dest;
-	s = src;
-	i = 0;
-	while (i < n)
+	if (((c > 64 && c < 91) || (c > 96 && c < 123))
+		|| (c > 47 && c < 58))
 	{
-		d[i] = s[i];
-		i++;
+		return (1);
 	}
-	return (dest);
+	return (0);
 }
