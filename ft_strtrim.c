@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:10:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/09 22:47:09 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/09 22:54:05 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*begin;
 	char	*end;
 	char	*trimmed;
-	int		i;
+	size_t	i;
 
 	begin = (char *) s1;
 	i = 0;
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		begin++;
 		i++;
-		if ((int) i >= ft_strlen(s1))
+		if (i >= ft_strlen(s1))
 			return (ft_strdup(""));
 	}
 	end = (char *) &s1[ft_strlen(s1) - 1];
