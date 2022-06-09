@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 22:02:04 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/02 22:30:47 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/08 23:24:17 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,30 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
+	char	*str;
 	size_t			i;
 
-	str = (unsigned char *) s;
+	if (!s)
+		return (NULL);
+	str = (char *) s;
 	i = 0;
-	while (i < n && str[i])
+	while (i < n)
 	{
-		if (str[i] == (unsigned char) c)
+		if (str[i] == (char) c)
 			return ((void *) &str[i]);
 		i++;
 	}
 	return (NULL);
 }
+
+/*
+#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	char s[] = {0, 1, 2 ,3 ,4 ,5};
+	printf("orig: %p\n", memchr(s, 2, 3));
+	printf("mine: %p\n", ft_memchr(s, 2, 3));
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 01:09:09 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/05 07:04:35 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/08 23:14:26 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ char	*ft_strrchr(const char *s, int c)
 	char	*last;
 	char	lc;
 
+	if (!s)
+		return (NULL);
 	lc = '\0';
 	while (*s)
 	{
-		if ((int)(*s) == c)
+		if (*s == (char) c)
 		{
 			last = (char *) s;
 			lc = *last;
@@ -29,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (lc)
 		return (last);
-	if ((int)(*s) == c)
+	if (*s == (char) c)
 		return ((char *) s);
 	return (NULL);
 }

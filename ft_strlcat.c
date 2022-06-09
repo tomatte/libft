@@ -6,34 +6,25 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:59:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/05 20:11:02 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/08 22:54:24 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i++])
-		;
-	return (i - 1);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int		dst_len;
 	int		src_len;
-	int		i;
+	size_t	i;
 	char	*s;
 
 	s = (char *) src;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = dst_len;
-	while (i < ((int) size) - 1 && *s)
+	while (i < size && *s)
 	{
 		dst[i] = *s;
 		s++;
