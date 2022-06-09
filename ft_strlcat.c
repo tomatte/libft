@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:59:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/08 22:54:24 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/09 22:10:53 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = dst_len;
-	while (i < size && *s)
+	while (i + 1 < size && *s)
 	{
 		dst[i] = *s;
 		s++;
@@ -75,6 +75,22 @@ int	main(void)
 	strlcpy(buffer2, str1, 5);
 	l1 = ft_strlcat(buffer1, "noite, fazer logo 12345678", 30);
 	l2 = strlcat(buffer2, "noite, fazer logo 12345678", 30);
+	printf("mine: %s\tl1: %d\n", buffer1, l1);
+	printf("orig: %s\tl2: %d\n", buffer2, l2);
+
+	printf("\n\n");
+	buffer1 = (char *) malloc(15);
+	buffer2 = (char *) malloc(15);
+	buffer1[0] = '\0';
+	buffer2[0] = '\0';
+	buffer1[11] = 'a';
+	buffer2[11] = 'a';
+	memset(buffer1, 0, 14);
+	memset(buffer2, 0, 14);
+	memset(buffer1, 'r', 6);
+	memset(buffer2, 'r', 6);
+	l1 = ft_strlcat(buffer1, "lorem ipsum", 14);
+	l2 = strlcat(buffer2, "lorem ipsum", 14);
 	printf("mine: %s\tl1: %d\n", buffer1, l1);
 	printf("orig: %s\tl2: %d\n", buffer2, l2);
 	return (0);
