@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 20:22:10 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/13 21:53:44 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/13 23:52:45 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,11 @@ char	**ft_split(char const *s, char c)
 		size = strchar_len(&s[i], c) + 1;
 		strings[j] = (char *) malloc(size);
 		ft_strlcpy(strings[j], &s[i], size);
-		i += size - 1;
+		if (s[i + size - 1] == '\0')
+			i += size - 1;
+		else
+			i += size;
 		j++;
-		if (s[i] == c)
-			i++;
 	}
 	strings[j] = NULL;
 	return (strings);
@@ -94,7 +95,7 @@ int		main(void)
 	strings = ft_split(" ", ',');
 	print_strarr(strings);
 
-	strings = ft_split("     ", ' ');
+	strings = ft_split("    ", ' ');
 	print_strarr(strings);
 	return (0);
 }
