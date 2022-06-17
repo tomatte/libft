@@ -5,68 +5,81 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 20:22:10 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/13 23:52:45 by dbrandao         ###   ########.fr       */
+/*   Created: 2022/06/17 15:14:42 by dbrandao          #+#    #+#             */
+/*   Updated: 2022/06/17 19:08:31 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
-int	len_split(char const *s, char c)
+//jumps addresses
+char	*jump(char *s, char c)
 {
-	int	splits;
-
-	splits = 0;
-	while (*s)
-	{
-		if (*s == c)
-			splits++;
+	while (*s != c && *s)
 		s++;
-	}
-	return (splits);
+	while (*s == c)
+		s++;
+	return (s);
 }
 
-int	strchar_len(char const *str, char c)
+//returns the number of strings to be created
+int	split_len(char *s, char c)
 {
-	int	i;
+	int	len;
+
+	len = 0;
+	while (*s)
+	{
+		if (*s != c)
+			len++;
+		while (*s != c && *s)
+			s++;
+		s = jump(s, c);
+	}
+	return (len);
+}
+
+//create new string
+char	*new_str(char *str, char c)
+{
+	int		i;
+	char	*new;
 
 	i = 0;
 	while (str[i] != c && str[i])
 		i++;
-	return (i);
+	if (!i)
+		return (NULL);
+	new = (char *) malloc(i + 1);
+	ft_strlcpy(new, str, i + 1);
+	return (new);
 }
 
 char	**ft_split(char const *s, char c)
 {
+	int		len;
 	int		i;
-	int		j;
-	int		size;
-	int		splits;
+	char	*s1;
 	char	**strings;
 
-	splits = len_split(s, c);
-	strings = (char **) malloc(sizeof(char *) * (splits + 1));
-	j = 0;
+	s1 = ft_strtrim(s, &c);
+	len = split_len(s1, c);
+	strings = (char **) malloc(sizeof(char *) * (len + 1));
 	i = 0;
-	strings[0] = (char *) malloc(strchar_len(s, c) + 1);
-	while (j < splits + 1)
+	while (i < len)
 	{
-		size = strchar_len(&s[i], c) + 1;
-		strings[j] = (char *) malloc(size);
-		ft_strlcpy(strings[j], &s[i], size);
-		if (s[i + size - 1] == '\0')
-			i += size - 1;
-		else
-			i += size;
-		j++;
+		strings[i] = new_str(s1, c);
+		s1 = jump(s1, c);
+		i++;
 	}
-	strings[j] = NULL;
+	strings[i] = NULL;
 	return (strings);
 }
 
 /*
 #include <stdio.h>
+char	**split(char const *s, char c);
 void	print_strarr(char **strings)
 {
 	while (*strings)
@@ -74,28 +87,71 @@ void	print_strarr(char **strings)
 		if (**strings == '\0')
 			printf("\\0\n");
 		else
-			printf("%s\n", *strings++);
+			printf("%s\n", *strings);
 		strings++;
 	}
 	printf("\n");
 }
-int		main(void)
+int	main(void)
 {
 	char	**strings;
 
-	strings = ft_split("lindo dia!", ' ');
+	strings = ft_split("amo,,,uvas pretas", ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split("amo,,,uvas pretas", ',');
+	printf("WW:\n");
 	print_strarr(strings);
 
-	strings = ft_split("limonada,cachaça,pink limonade,suco de maracujá", ',');
+	strings = ft_split("alo,galera,do,pagode", ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split("alo,galera,do,pagode", ',');
+	printf("WW:\n");
+	print_strarr(strings);	
+	
+	strings = ft_split("valeu,,,,meu povo,,,,,,almenarense", ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split("valeu,,,,meu povo,,,,,,almenarense", ',');
+	printf("WW:\n");
 	print_strarr(strings);
 
-	strings = ft_split("", ',');
+	strings = ft_split(",,,,,,,,", ',');
+	printf("Mine:\n");
 	print_strarr(strings);
-		
-	strings = ft_split(" ", ',');
+	strings = split(",,,,,,,,", ',');
+	printf("WW:\n");
 	print_strarr(strings);
 
-	strings = ft_split("    ", ' ');
+	char w[] = "morango,de,uva,com,azeite,cobertura,chocolate,amenduas,patel";
+	strings = ft_split(w, ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split(w, ',');
+	printf("WW:\n");
+	print_strarr(strings);
+	
+	strings = ft_split(",testando, ,123,", ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split(",testando, ,123,", ',');
+	printf("ww:\n");
+	print_strarr(strings);
+
+	strings = ft_split(",,,,,,,,comendo,,,,,,muitas,,,,,,frutas!,,,,", ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split(",,,,,,,,comendo,,,,,,muitas,,,,,,frutas!,,,,", ',');
+	printf("ww:\n");
+	print_strarr(strings);
+
+	char w1[] = "comendo,,,frutas,,fresquinhas,,na fazenda,,,do seu ze,,hoje";
+	strings = ft_split(w1, ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	strings = split(w1, ',');
+	printf("ww:\n");
 	print_strarr(strings);
 	return (0);
 }
