@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 00:34:47 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/06 04:53:30 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/18 20:44:20 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,9 @@ int	main(void)
 	c = &a;
 	printf("mine: %d\n", ft_strncmp(c, "abcdefghia", 5));
 	printf("orig: %d\n\n", strncmp(c, "abcdefghia", 5));
+	
+	printf("final mine: %d\n", ft_strncmp("test\200", "test\0", 6));
+	printf("final orig: %d\n\n", strncmp("test\200", "test\0", 6));
 	return (0);
 }
 */

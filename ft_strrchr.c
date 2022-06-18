@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 01:09:09 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/08 23:14:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/17 15:49:51 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *) s);
 	return (NULL);
 }
+
+//amo,,,dog,caramelo
 
 // #include <stdio.h>
 // #include <string.h>

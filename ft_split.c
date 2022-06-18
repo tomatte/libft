@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:14:42 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/17 19:08:31 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/18 21:37:02 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,9 @@ char	**ft_split(char const *s, char c)
 	char	*s1;
 	char	**strings;
 
-	s1 = ft_strtrim(s, &c);
+	while (*s == c && *s)
+		s++;
+	s1 = (char *) s;
 	len = split_len(s1, c);
 	strings = (char **) malloc(sizeof(char *) * (len + 1));
 	i = 0;
@@ -88,6 +90,7 @@ void	print_strarr(char **strings)
 			printf("\\0\n");
 		else
 			printf("%s\n", *strings);
+		free(*strings);
 		strings++;
 	}
 	printf("\n");
@@ -95,6 +98,11 @@ void	print_strarr(char **strings)
 int	main(void)
 {
 	char	**strings;
+
+	strings = ft_split("amo,,,uvas pretas", ',');
+	printf("Mine:\n");
+	print_strarr(strings);
+	free(strings);
 
 	strings = ft_split("amo,,,uvas pretas", ',');
 	printf("Mine:\n");
@@ -153,6 +161,10 @@ int	main(void)
 	strings = split(w1, ',');
 	printf("ww:\n");
 	print_strarr(strings);
+
+	//functions needed:
+	//gcc ft_split.c split.c ft_strlcpy.c ft_strtrim.c 
+	//ft_substr.c ft_strdup.c ft_strlen.c ft_strchr.c
 	return (0);
 }
 */
