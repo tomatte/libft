@@ -10,5 +10,5 @@ recreate libft.a
 remove all created files
 ```make fclean```
 
-to use the functions include libft.h on your c file
+to use the functions include libft.h on your c file and copile it with libft.a
 ```#include "libft.h"```
