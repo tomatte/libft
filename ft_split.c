@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:14:42 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/18 21:37:02 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/18 23:42:12 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*jump(char *s, char c)
 {
 	while (*s != c && *s)
 		s++;
-	while (*s == c)
+	while (*s == c && *s)
 		s++;
 	return (s);
 }
@@ -35,7 +35,8 @@ int	split_len(char *s, char c)
 			len++;
 		while (*s != c && *s)
 			s++;
-		s = jump(s, c);
+		while (*s == c && *s)
+			s++;
 	}
 	return (len);
 }
@@ -99,6 +100,11 @@ int	main(void)
 {
 	char	**strings;
 
+	strings = ft_split("amo,,,uvas pretas", 0);
+	printf("Mine:\n");
+	print_strarr(strings);
+	free(strings);
+	
 	strings = ft_split("amo,,,uvas pretas", ',');
 	printf("Mine:\n");
 	print_strarr(strings);
