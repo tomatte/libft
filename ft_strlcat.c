@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 03:59:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/09 22:10:53 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/19 16:56:26 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int		dst_len;
-	int		src_len;
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
 	char	*s;
 
@@ -31,9 +31,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	if (dst_len >= (int) size)
+	if (dst_len >= size)
 		return (size + src_len);
-	return ((size_t)(dst_len + src_len));
+	return (dst_len + src_len);
 }
 
 /*
@@ -93,6 +93,23 @@ int	main(void)
 	l2 = strlcat(buffer2, "lorem ipsum", 14);
 	printf("mine: %s\tl1: %d\n", buffer1, l1);
 	printf("orig: %s\tl2: %d\n", buffer2, l2);
+	
+	//---------
+
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
+	char dest2[30]; memset(dest, 0, 30);
+	char * src2 = (char *)"AAAAAAAAA";
+	dest[0] = 'B';
+	dest2[0] = 'B';
+	memset(dest, 'B', 4);
+	memset(dest, 'C', 5);
+	memset(dest2, 'B', 4);
+	memset(dest2, 'C', 5);
+	l1 = ft_strlcat(dest, src, -1);
+	l2 = strlcat(dest2, src, -1);
+	printf("\nmine: %s\tl1: %d\n", dest, l1);
+	printf("orig: %s\tl2: %d\n", dest2, l2);
 	return (0);
 }
 */
