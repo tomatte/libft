@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 20:05:00 by dbrandao          #+#    #+#              #
-#    Updated: 2022/06/19 21:27:02 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/06/20 15:08:46 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,11 @@ SRC		=    ft_strrchr.c ft_strchr.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 			 ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 			 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-OBJS		= ${SRC:.c=.o}
+OBJS	=	${SRC:.c=.o}
+
+BSRC	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+
+B_OBJS	=	${BSRC:.c=.o}
 
 CFLAGS	+= -Wall -Werror -Wextra -I./libft.h
 
@@ -35,3 +39,8 @@ fclean:		clean
 	rm -f ${NAME}
 
 re: fclean all
+
+bonus:	$(NAME) $(B_OBJS)
+	ar -rcs $(NAME) $(B_OBJS)
+
+.PHONEY: .c.o all bonus clean fclean re
