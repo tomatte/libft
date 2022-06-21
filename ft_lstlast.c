@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 15:06:31 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/20 18:01:22 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/21 16:47:54 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return NULL;
+		return (NULL);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);
