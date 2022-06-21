@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 20:05:00 by dbrandao          #+#    #+#              #
-#    Updated: 2022/06/20 21:28:45 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/06/21 05:06:53 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC		=    ft_strrchr.c ft_strchr.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 OBJS	=	${SRC:.c=.o}
 
 BSRC	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-			ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 B_OBJS	=	${BSRC:.c=.o}
 
