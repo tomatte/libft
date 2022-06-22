@@ -6,13 +6,12 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:49:23 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/20 19:58:30 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/22 18:24:41 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
