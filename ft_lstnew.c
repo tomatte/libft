@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:00:26 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/20 14:22:12 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/25 15:57:35 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	t_list	*test;
-	char	c = 'S';
-	test = ft_lstnew(&c);
-	printf("%c\n", *((char *) test->content));
-	return (0);
-}*/

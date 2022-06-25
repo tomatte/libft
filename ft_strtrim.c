@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:10:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/09 22:54:05 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/25 15:59:21 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed, begin, i + 1);
 	return (trimmed);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("0: |%s|\n", ft_strtrim("        ", "\t \n"));
-	printf("1: |%s|\n", ft_strtrim("  morangos   ", " "));
-	printf("2: |%s|\n", ft_strtrim("jjjjjmorangosjj", "jj"));
-	printf("3: |%s|\n", ft_strtrim("           morangos   ", " "));
-	char	s[] = "abbb aaad cc cbabcba cbacba cbgatinhos  cabcba cbabcab acb ";
-	printf("4: |%s|\n", ft_strtrim(s, " abcd"));
-	return (0);
-}
-*/

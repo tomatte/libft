@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:18:01 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/08 23:58:06 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/25 15:58:39 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(new, s2, len + 1);
 	return (new);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*s;
-	printf("1: %s\n", ft_strjoin("daniel ", "lindo!"));
-	printf("2: %s\n", ft_strjoin("", ""));
-	printf("3: %s\n", ft_strjoin(NULL, NULL));
-	printf("3: %s\n", ft_strjoin("jabuticaba", NULL));
-	printf("3: %s\n", ft_strjoin("jabuticaba", ""));
-	printf("3: %s\n", ft_strjoin("", "jabuticaba"));
-	printf("3: %s\n", ft_strjoin("", NULL));
-	printf("3: %s\n", ft_strjoin(NULL, "opa"));
-	printf("3: %s\n", ft_strjoin("opa", "opa"));
-	return (0);
-}
-*/

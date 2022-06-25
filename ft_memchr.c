@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 22:02:04 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/13 22:29:04 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/25 15:57:46 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char s[] = {0, 1, 2 ,3 ,4 ,5};
-	printf("orig: %p\n", memchr(s, 2, 3));
-	printf("mine: %p\n", ft_memchr(s, 2, 3));
-	return (0);
-}
-*/

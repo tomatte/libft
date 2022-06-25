@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 15:34:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/18 20:30:39 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/25 15:56:17 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,23 +92,3 @@ char	*ft_itoa(int n)
 	number[i] = '\0';
 	return (number);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("res: %s\n", ft_itoa(-100));
-	printf("res: %s\n", ft_itoa(0));
-	printf("res: %s\n", ft_itoa(-344));
-	//
-	printf("res: %s\n", ft_itoa(-1));
-	printf("res: %s\n", ft_itoa(5));
-	printf("res: %s\n", ft_itoa(10));
-	printf("res: %s\n", ft_itoa(2030));
-	printf("res: %s\n", ft_itoa(20000));
-	printf("res: %s\n", ft_itoa(2147483647));
-	printf("res: %s\n", ft_itoa(-2147483648));
-	printf("res: %s\n", ft_itoa(-2147483647));
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 20:27:38 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/19 21:26:38 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/25 15:58:06 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,37 +84,3 @@ void	ft_putnbr_fd(int n, int fd)
 		decimal_places--;
 	}
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	ft_putnbr_fd(235, 1);
-	printf("\n");
-
-	ft_putnbr_fd(2003001, 1);
-	printf("\n");
-
-	ft_putnbr_fd(-235, 1);
-	printf("\n");
-
-	ft_putnbr_fd(-2003001, 1);
-	printf("\n");
-
-	ft_putnbr_fd(0, 1);
-	printf("\n");
-
-	ft_putnbr_fd(1, 1);
-	printf("\n");
-
-	ft_putnbr_fd(-10000, 1);
-	printf("\n");
-	
-	ft_putnbr_fd(-2147483648, 1);
-	printf("\n");
-
-	ft_putnbr_fd(2147483647, 1);
-	printf("\n");
-	return (0);
-}
-*/
