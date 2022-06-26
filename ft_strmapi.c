@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 14:43:31 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:59:02 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 14:42:16 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*result;
 
+	if (!s || !f)
+		return (NULL);
 	result = ft_strdup(s);
 	if (!result)
 		return (NULL);

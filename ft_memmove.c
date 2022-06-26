@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 21:49:05 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/02 22:30:30 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:49:58 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int				i;
 
-	if (!(unsigned char *) src || !(unsigned char *) dest)
-		return (dest);
+	if (!dest && !src)
+		return (NULL);
 	if ((unsigned char *) dest > (unsigned char *) src)
 	{
 		i = (int) n - 1;

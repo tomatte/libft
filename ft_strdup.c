@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:49:11 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:58:31 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:17:39 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	dup = (char *) malloc(ft_strlen(s) + 1);
+	if (!dup)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

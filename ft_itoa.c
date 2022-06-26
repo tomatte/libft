@@ -6,14 +6,14 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 15:34:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:56:17 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:05:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int	decimal_count(int n)
+int	decimals_count(int n)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ int	ft_abs(int n)
 	return (n);
 }
 
-int	ft_power(int n, int pwr)
+int	powerr(int n, int pwr)
 {
 	int	result;
 
@@ -50,15 +50,19 @@ char	*alloc_and_values(int *n, int *i, int *dec)
 	if (!*n)
 		*dec = 1;
 	else
-		*dec = decimal_count(*n);
+		*dec = decimals_count(*n);
 	if (*n >= 0)
 	{
 		number = (char *) malloc(*dec + 1);
+		if (!number)
+			return (NULL);
 		*i = 0;
 	}
 	else
 	{
 		number = (char *) malloc(*dec + 2);
+		if (!number)
+			return (NULL);
 		*number = '-';
 		*n *= -1;
 		*i = 1;
@@ -76,13 +80,15 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	number = alloc_and_values(&n, &i, &dec);
+	if (!number)
+		return (NULL);
 	while (dec)
 	{
-		aux = n / ft_power(10, dec - 1);
+		aux = n / powerr(10, dec - 1);
 		number[i] = aux + 48;
-		n -= aux * ft_power(10, dec - 1);
+		n -= aux * powerr(10, dec - 1);
 		dec--;
-		while (dec - decimal_count(n) > 0)
+		while (dec - decimals_count(n) > 0)
 		{
 			number[++i] = '0';
 			dec--;

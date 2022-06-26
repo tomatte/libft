@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 22:02:04 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:57:46 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:53:39 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char	*str;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	str = (char *) s;
 	i = 0;
 	while (i < n)

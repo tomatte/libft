@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 21:31:38 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:57:28 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:35:40 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first;
 	t_list	*aux;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	first = ft_lstnew(f(lst->content));
 	if (!first)

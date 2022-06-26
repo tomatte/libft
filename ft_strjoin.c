@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:18:01 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:58:39 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 14:32:22 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new;
 
 	if (!s1 || !s2)
-		return (ft_strdup(""));
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	new = (char *) malloc(len + 1);
 	if (!new)

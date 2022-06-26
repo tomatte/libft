@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 01:09:09 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:59:16 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:54:21 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	char	*last;
 	char	lc;
 
-	if (!s)
-		return (NULL);
 	lc = '\0';
 	while (*s)
 	{

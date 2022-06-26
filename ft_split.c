@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:14:42 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:58:18 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/26 22:43:31 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	*new_str(char *str, char c)
 	if (!i)
 		return (NULL);
 	new = (char *) malloc(i + 1);
+	if (!new)
+		return (NULL);
 	ft_strlcpy(new, str, i + 1);
 	return (new);
 }
@@ -64,15 +66,21 @@ char	**ft_split(char const *s, char c)
 	char	*s1;
 	char	**strings;
 
+	if (!s)
+		return (NULL);
 	while (*s == c && *s)
 		s++;
 	s1 = (char *) s;
 	len = split_len(s1, c);
 	strings = (char **) malloc(sizeof(char *) * (len + 1));
+	if (!strings)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
 		strings[i] = new_str(s1, c);
+		if (!strings[i])
+			return (NULL);
 		s1 = jump(s1, c);
 		i++;
 	}
