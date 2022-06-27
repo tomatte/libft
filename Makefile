@@ -40,7 +40,7 @@ $(NAME):	${OBJS} ${H_SRC}
 all: ${NAME}
 
 bonus: ${BONUS_OBJS} ${H_SRC}
-			@make OBJS="$(OBJS) $(OBJB)" all
+			ar -rc ${NAME} $^
 
 clean:
 		${RM} ${OBJS} ${BONUS_OBJS}
