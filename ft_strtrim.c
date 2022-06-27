@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:10:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/26 14:34:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/06/27 15:38:53 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ int	find_char(const char *set, char c)
 	if (ft_strchr(set, c))
 		return (1);
 	return (0);
+}
+
+int	trimmed_len(char *begin, char *end)
+{
+	int	i;
+
+	i = 0;
+	while (&begin[i] != end)
+		i++;
+	return (i + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -41,10 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = (char *) &s1[ft_strlen(s1) - 1];
 	while (find_char(set, *end))
 		end--;
-	i = 0;
-	while (&begin[i] != end)
-		i++;
-	i++;
+	i = trimmed_len(begin, end);
 	trimmed = (char *) malloc(i + 1);
 	if (!trimmed)
 		return (NULL);
