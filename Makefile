@@ -19,7 +19,8 @@ BONUS_SRC	=	ft_lstnew.c ft_lstadd_front.c \
 				ft_lstmap.c \
 
 
-MORE_SRC	=	ft_putchar.c ft_putstr.c\
+MORE_SRC	=	ft_putchar.c ft_putstr.c \
+				ft_putnbr.c
 
 H_SRC		=	libft.h
 
