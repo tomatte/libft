@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 20:27:51 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 23:03:10 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:29:45 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,40 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
 int		ft_isascii(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+int		ft_toupper(int c); //convert word to upper based on ASCIIV
+int		ft_tolower(int c); //convert word to upper based on ASCII
+
+//fills memory with zeros: useful for initializations or cleaning data
 void	ft_bzero(void *s, size_t n);
+
+//copies from a memory to another: overlap not treated
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+//fills memory with value specified in c
 void	*ft_memset(void *str, int c, size_t n);
+
+//copies data from a memory to another and treats overlap
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+//if c values is found, then it's location is returned
 void	*ft_memchr(const void *s, int c, size_t n);
+
+//string length
 size_t	ft_strlen(const char *s);
+
+//copies string until specified size or null char is found
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+
+//finds a char in a string and returns it's location
 char	*ft_strchr(const char *s, int c);
+
+//return the location of the last specified char found int he string
 char	*ft_strrchr(const char *s, int c);
+
+//cocatenates strings until specified size
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+//compare strings until n size. returns *s1 - *s2, then 0 if equals
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
