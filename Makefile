@@ -39,8 +39,7 @@ $(NAME):	${OBJS} ${H_SRC}
 
 all: ${NAME}
 
-bonus: ${BONUS_OBJS} ${H_SRC}
-			ar -rc ${NAME} $^
+bonus: ${NAME} ${BONUS_OBJS} ${H_SRC}
 
 clean:
 		${RM} ${OBJS} ${BONUS_OBJS}
