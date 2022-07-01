@@ -6,14 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 18:12:54 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:59:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:07:39 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-char	*ft_strdup(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

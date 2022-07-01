@@ -6,11 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 19:29:34 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/19 19:47:48 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:05:43 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

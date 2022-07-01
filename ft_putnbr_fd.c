@@ -6,11 +6,10 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 20:27:38 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:58:06 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:05:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 int	ft_power(int n, int pwr)

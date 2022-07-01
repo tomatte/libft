@@ -6,11 +6,10 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:45:08 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:58:51 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:06:43 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

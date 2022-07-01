@@ -6,11 +6,10 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 04:48:39 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/25 15:59:11 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:07:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

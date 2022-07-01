@@ -6,11 +6,10 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:14:42 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/26 22:43:31 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:06:08 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 //jumps addresses

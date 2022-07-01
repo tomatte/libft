@@ -6,12 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:10:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/26 14:34:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:07:22 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	find_char(const char *set, char c)
 {

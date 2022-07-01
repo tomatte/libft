@@ -6,11 +6,10 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 15:34:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/26 22:05:59 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:02:46 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	decimals_count(int n)

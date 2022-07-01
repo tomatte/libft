@@ -6,11 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 01:28:11 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/06/26 13:51:18 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 21:01:30 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
