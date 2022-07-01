@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 20:27:51 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 23:29:45 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:43:06 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_putnbr(int n);
+
+//same as ft_putnbr, but with unsigned integers
+void	ft_put_uint(unsigned int n);
 
 #endif
