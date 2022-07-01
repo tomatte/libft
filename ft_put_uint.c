@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 23:39:43 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 23:45:12 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:53:54 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_power(unsigned int n, unsigned int pwr)
+static unsigned int	ft_power(unsigned int n, unsigned int pwr)
 {
 	unsigned int	result;
 
@@ -22,7 +22,7 @@ unsigned int	ft_power(unsigned int n, unsigned int pwr)
 	return (result);
 }
 
-unsigned int	decimal_count(unsigned int n)
+static unsigned int	decimal_count(unsigned int n)
 {
 	unsigned int	i;
 
