@@ -19,9 +19,11 @@ BONUS_SRC	=	ft_lstnew.c ft_lstadd_front.c \
 				ft_lstmap.c \
 
 
+MORE_SRC	=	ft_putchar.c \
+
 H_SRC		=	libft.h
 
-OBJS		=	${SRC:.c=.o}
+OBJS		=	${SRC:.c=.o} ${MORE_SRC:.c=.o}
 
 BONUS_OBJS	=	${BONUS_SRC:.c=.o}
 
