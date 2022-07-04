@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 22:56:00 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 23:01:54 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 05:02:46 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_power(int n, int pwr)
+static int	ft_power(int n, int pwr)
 {
 	int	result;
 
@@ -22,7 +22,7 @@ int	ft_power(int n, int pwr)
 	return (result);
 }
 
-int	decimal_count(int n)
+static int	decimal_count(int n)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ int	decimal_count(int n)
 	return (i);
 }
 
-void	negative_case(int *n)
+static void	negative_case(int *n)
 {
 	if (*n < 0)
 	{

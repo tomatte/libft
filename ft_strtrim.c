@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:10:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 21:07:22 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 05:04:11 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	find_char(const char *set, char c)
+static int	find_char(const char *set, char c)
 {
 	if (ft_strchr(set, c))
 		return (1);

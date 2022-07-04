@@ -6,14 +6,14 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:14:42 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 21:06:08 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 05:03:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //jumps addresses
-char	*jump(char *s, char c)
+static char	*jump(char *s, char c)
 {
 	while (*s != c && *s)
 		s++;
@@ -23,7 +23,7 @@ char	*jump(char *s, char c)
 }
 
 //returns the number of strings to be created
-int	split_len(char *s, char c)
+static int	split_len(char *s, char c)
 {
 	int	len;
 
@@ -41,7 +41,7 @@ int	split_len(char *s, char c)
 }
 
 //create new string
-char	*new_str(char *str, char c)
+static char	*new_str(char *str, char c)
 {
 	int		i;
 	char	*new;

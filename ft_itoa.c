@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 15:34:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 21:02:46 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 05:01:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	decimals_count(int n)
+static int	decimals_count(int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	decimals_count(int n)
 	return (i);
 }
 
-int	ft_abs(int n)
+static int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
@@ -42,7 +42,7 @@ int	powerr(int n, int pwr)
 	return (result);
 }
 
-char	*alloc_and_values(int *n, int *i, int *dec)
+static char	*alloc_and_values(int *n, int *i, int *dec)
 {
 	char	*number;
 
