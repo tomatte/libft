@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 20:27:51 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/01 23:50:38 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 06:16:55 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,8 @@ void	ft_putnbr(int n);
 
 //same as ft_putnbr, but with unsigned integers
 void	ft_put_uint(unsigned int n);
+
+//converts decimal to hexadecimal
+char	*ft_inttohex(int number);
 
 #endif
