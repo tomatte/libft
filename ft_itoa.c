@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 15:34:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/04 05:01:09 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 06:32:18 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,6 @@ static int	decimals_count(int n)
 		i++;
 	}
 	return (i);
-}
-
-static int	ft_abs(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
 }
 
 int	powerr(int n, int pwr)

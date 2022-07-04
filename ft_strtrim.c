@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 00:10:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/04 05:04:11 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/04 06:35:13 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,21 @@ static int	find_char(const char *set, char c)
 	return (0);
 }
 
+static int	get_begin_position(char **begin, char const *s1, char const *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (find_char(set, **begin))
+	{
+		(*begin)++;
+		i++;
+		if (i >= ft_strlen(s1))
+			return (0);
+	}
+	return (1);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*begin;
@@ -29,14 +44,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	begin = (char *) s1;
-	i = 0;
-	while (find_char(set, *begin))
-	{
-		begin++;
-		i++;
-		if (i >= ft_strlen(s1))
-			return (ft_strdup(""));
-	}
+	if (!get_begin_position(&begin, s1, set))
+		return ft_strdup("");
 	end = (char *) &s1[ft_strlen(s1) - 1];
 	while (find_char(set, *end))
 		end--;
