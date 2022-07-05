@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_inttohex.c                                      :+:      :+:    :+:   */
+/*   ft_itohex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 04:59:47 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/07/04 06:15:53 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/07/05 02:46:14 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	hex_len(int number)
+static int	hex_len(long unsigned int number)
 {
 	int	i;
 
 	if (!number)
 		return (1);
 	i = 0;
-	while (number % 16)
+	while (number)
 	{
 		number /= 16;
 		i++;
@@ -27,9 +27,8 @@ static int	hex_len(int number)
 	return (i);
 }
 
-char	*ft_inttohex(int number)
+char	*ft_itohex(long unsigned int number)
 {
-	const char	hexmap[] = "0123456789abcdef";
 	char		*hexnumber;
 	int			remainder;
 	int			len;
@@ -44,7 +43,7 @@ char	*ft_inttohex(int number)
 	{
 		remainder = number % 16;
 		number = number / 16;
-		hexnumber[len] = hexmap[remainder];
+		hexnumber[len] = HEXMAP[remainder];
 	}
 	return (hexnumber);
 }
