@@ -23,11 +23,14 @@ MORE_SRC	=	ft_putchar.c ft_putstr.c \
 				ft_putnbr.c ft_put_uint.c \
 				ft_itohex.c ft_strtoupper.c \
 				ft_uitoa.c
+
+GNL_SRC		=	./get_next_line/get_next_line_bonus.c \
+				./get_next_line/get_next_line_utils_bonus.c \
 				
 
 H_SRC		=	libft.h
 
-OBJS		=	${SRC:.c=.o} ${MORE_SRC:.c=.o}
+OBJS		=	${SRC:.c=.o} ${MORE_SRC:.c=.o} ${GNL_SRC:.c=.o}
 
 BONUS_OBJS	=	${BONUS_SRC:.c=.o}
 
