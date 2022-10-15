@@ -22,6 +22,7 @@ BONUS_SRC	=	ft_lstnew.c ft_lstadd_front.c \
 MORE_SRC	=	ft_putchar.c ft_putstr.c \
 				ft_putnbr.c ft_put_uint.c \
 				ft_itohex.c ft_strtoupper.c \
+				ft_uitoa.c
 				
 
 H_SRC		=	libft.h
@@ -43,14 +44,18 @@ $(NAME):	${OBJS} ${H_SRC}
 			ar -rcs $@ $^
 
 all: ${NAME}
+	make -C ./ft_printf bonus
 
 bonus: ${NAME} ${BONUS_OBJS} ${H_SRC}
+	make -C ./ft_printf bonus
 
 clean:
 		${RM} ${OBJS} ${BONUS_OBJS}
+		make -C ./ft_printf clean
 
 fclean:	clean
 		${RM} ${NAME}
+		make -C ./ft_printf fclean
 
 re:		fclean all
 
