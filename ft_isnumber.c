@@ -31,6 +31,8 @@ static int	is_number(char *str)
 		return (0);
 	if (is_sign(*str))
 		str++;
+	if (!*str)
+		return (0);
 	while (ft_isdigit(*str))
 		str++;
 	if (!ft_isspace(*str) && *str != '\0')
