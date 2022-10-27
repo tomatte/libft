@@ -23,7 +23,7 @@ long int	ft_atoi_long(const char *nptr)
 		nptr++;
 	if (*nptr == '-')
 		sign *= -1;
-	if (*nptr == '-' || *nptr == '+')
+	if (ft_issign(*nptr))
 		nptr++;
 	while (ft_isdigit(*nptr))
 	{

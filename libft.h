@@ -119,6 +119,9 @@ result examples:
 char	*ft_isnumber(char *str);
 
 //verify if character is a space 
-int isspace(char c);
+int ft_isspace(char c);
+
+//return 1 if char is - or +
+int	ft_issign(char c);
 
 #endif
