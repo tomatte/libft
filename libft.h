@@ -106,4 +106,19 @@ char	*ft_itohex(long unsigned int number);
 //convert string to uppercase
 char	*ft_strtoupper(char *str);
 
+int		ft_abs(int num);
+
+/*verify if string is a number, 
+it passes the initial spaces and stops in the first space after the number
+result examples:
+"  -99 " is a number
+"+99" is a number
+"99" is a number
+"99t" is not a number
+*/
+char	*ft_isnumber(char *str);
+
+//verify if character is a space 
+int isspace(char c);
+
 #endif
