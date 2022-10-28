@@ -18,18 +18,11 @@ static void	pass_spaces(char **str)
         (*str)++;
 }
 
-static int	is_sign(char c)
-{
-	if (c == '-' || c == '+')
-		return (1);
-	return (0);
-}
-
 static int	is_number(char *str)
 {
 	if (!str)
 		return (0);
-	if (is_sign(*str))
+	if (ft_issign(*str))
 		str++;
 	if (!*str)
 		return (0);
@@ -42,10 +35,10 @@ static int	is_number(char *str)
 
 char	*ft_isnumber(char *str)
 {
-    if (!str)
+    if (!str || !*str)
         return (NULL);
     pass_spaces(&str);
-    if (!ft_isdigit(*str) && !is_sign(*str))
+    if (!ft_isdigit(*str) && !ft_issign(*str))
 		return (NULL);
 	if (is_number(str))
 		return (str);
